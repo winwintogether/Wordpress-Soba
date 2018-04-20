@@ -1,0 +1,204 @@
+.featured {
+  @include grid-column(10);
+  @include grid-column-position(center);
+  text-align: center;
+  position: relative;
+  top: -150px;
+  @include breakpoint(tablet down) {
+    @include grid-column(12);
+    top:0;
+  }
+
+  .title-box {
+  padding-left:20px;
+  padding-right:20px;
+  }
+  .inner {
+  background: #fcfbfb;
+  padding-top:40px;
+  padding-bottom:40px;
+  position:relative;
+  top:-3px;
+  @include grid-column(10);
+  @include grid-column-position(center);
+  @include breakpoint(tablet down) {
+    @include grid-column(12);
+    top:0;
+  }
+  }
+  .entry-title {
+    @extend h1;
+    padding-top:25px;
+    padding-bottom:25px;
+  }
+  .entry-summary {
+    padding-bottom:25px;
+  }
+}
+
+.secondary-featured {
+  top:-90px;
+  position:relative;
+  @include grid-row();
+  @include breakpoint(tablet down) {
+    top:30px;
+  }
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(tablet down) {
+      display: block;
+    }
+    .image {
+      @include grid-column(7);
+        @include breakpoint(tablet down) {
+        @include grid-column(12);
+      }
+    }
+
+    .content {
+      @include grid-column(5);
+        @include breakpoint(tablet down) {
+        @include grid-column(12);
+        text-align: center;
+      }
+    }
+  }
+}
+
+.main-loop {
+  padding-bottom:40px;
+  @include grid-row();
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        @include breakpoint(tablet down) {
+        flex-flow:column wrap;
+    }
+    .image {
+      @include grid-column(5);
+      @include breakpoint(tablet down) {
+        @include grid-column(12);
+      }
+    }
+
+    .content {
+      @include grid-column(7);
+      @include breakpoint(tablet down) {
+        @include grid-column(12);
+        text-align: center;
+      }
+      .blue-button {
+      	clear:both;
+      }
+      h2.entry-title {
+        font-weight:400;
+      }
+    }
+  }
+}
+
+.main-loop-left {
+   padding-bottom:40px;
+  @include grid-row();
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(tablet down) {
+        flex-flow:column wrap;
+    }
+    .image {
+      @include grid-column(5);
+      @include breakpoint(tablet down) {
+        @include grid-column(12);
+      }
+    }
+
+    .content {
+      @include grid-column(7);
+       @include breakpoint(tablet down) {
+        @include grid-column(12);
+      }
+      .blue-button {
+        clear:both;
+      }
+      h2.entry-title {
+        font-weight:400;
+      }
+    }
+  }
+}
+
+
+
+.single-wrap {
+  @include grid-row();
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include breakpoint(tablet down) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .inner {
+    @include grid-column(9);
+    @include breakpoint(tablet down) {
+      @include grid-column(11);
+    }
+    @include grid-column-position(center);
+  }
+}
+
+.updated {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .3em;
+  font-weight: 700;
+  padding-top:15px;
+  padding-bottom:15px;
+  span {
+    color: #4ecfff;
+  }
+}
+
+.follow-us {
+  background:#eee;
+  padding-top:80px;
+  padding-bottom:80px;
+  width:100%;
+  margin-top:40px;
+  margin-bottom:60px;
+  .inner {
+    @include grid-row();
+    .content {
+      @include grid-column(12);
+    }
+  }
+}
+
+.at-above-post-page {
+  padding-bottom:20px;
+}
+
+.previous-next {
+  padding-top:25px;
+  clear:both;
+  padding-bottom:25px;
+  @include grid-row();
+  .next, .previous {
+
+  @include grid-column(6);
+  text-align:center;
+  h2 {
+    padding:0;
+    margin:0;
+    a {
+      @extend .blue-button;
+      @extend .button.large;
+    }
+  }
+  }
+}

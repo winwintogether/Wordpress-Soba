@@ -1,0 +1,246 @@
+.tour-top-section {
+  @include grid-row();
+  @include grid-row-size(expand);
+  position: relative;
+  top: -190px;
+  @include breakpoint(tablet down) {
+    top:-110px;
+  }
+  .wrap-me {
+    @include grid-column(9);
+    @include grid-column-position(center);
+    @include unset-mobile-medium;
+    position:relative;
+  }
+  .weather {
+    position: absolute;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    align-self: auto;
+    justify-content: center;
+    width: 100%;
+    @include breakpoint(tablet down) {
+      width:96%;
+       .wind,.tide {
+      display:none;
+      }
+    }
+    .item {
+      @include browser("MSIE 9.0") {
+        float:left;
+      }
+      width: 130px;
+      text-align: center;
+      margin-left:3vw;
+      margin-right:3vw;
+      @include breakpoint(tablet down) {
+        width:100px;
+      }
+      .icon {
+        @include breakpoint(tablet down) {
+          width:49px;
+          height:49px;
+          margin:0 auto;
+        }
+      }
+      .data {
+        margin-top: 15px;
+        background: #171E2C;
+        font-family: Olswald;
+        border-radius: 50%;
+        height: 130px;
+        width: 130px;
+        font-size: 49px;
+        @include breakpoint(tablet down) {
+          width:100px;
+          height:100px;
+          font-size:40px;
+          line-height:33px;
+        }
+        color: #fff;
+        font-family: Oswald;
+        line-height: 48px;
+        span {
+          font-size: 14px;
+          color: #09bdff;
+          line-height: 14px;
+        }
+        p {
+          padding: 6px 0 0 0;
+          margin: 0;
+          line-height: 48px;
+          span.small {
+            font-size: 16px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .inner {
+    background: #F5F7FC;
+    top: 140px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 100px 60px 70px 60px;
+    @include breakpoint(tablet down) {
+      top:90px;
+      padding: 100px 20px 40px 20px;
+    
+    }
+  }
+}
+
+.facility-left {
+  @include grid-row();
+  @include grid-row-size(expand);
+  .inner {
+    @include grid-column(10);
+    @include grid-column-position(center);
+    background:url(../images/waves-dot.png) no-repeat 0 0;
+  }
+  
+  &.right {
+    background:url(../images/waves-dot.png) no-repeat 55% 0;
+    @include breakpoint(tablet down) {
+     
+    }
+  }
+  @include breakpoint(tablet down) {
+    background:url(../images/waves-dot.png) no-repeat top;
+  }
+  .title-box {
+  	 @include grid-column(6);
+     @include breakpoint(tablet down) {
+      @include grid-column(12);
+      text-align:center;
+     }
+  	 padding-top:40px;
+  	
+    h2 {
+      color: #09bdff;
+      font-family: Oswald;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 70px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    h3 {
+      font-family: Montserrat;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      span {
+      	color: #09bdff;
+      }
+    }
+  }
+.gallery {
+  &.mobile-hide {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    }
+    &.mobile-show {
+    display: none;
+    @include breakpoint(medium down) {
+      display: block;
+    }
+  }
+}
+
+  .photo-gallery {
+  	@include grid-column(6);
+  	padding-top:80px;
+    padding-bottom:80px;
+    @include breakpoint(tablet down) {
+      @include grid-column(12);
+      text-align: center;
+    }
+    .thumb {
+  		@include grid-column(3,0);
+  		padding: .5vw; 
+      padding-top:20px;
+      -webkit-box-flex: auto;
+      -ms-flex: auto;
+      flex: auto; 
+      @include breakpoint(medium down) {
+        display:none;
+      }
+  		&.last {
+  		
+  		}
+  	}
+  }
+}
+
+.facility-bottom {
+  width:100%;
+  position: relative;
+  float: left;
+  clear:both;
+  background:url(../images/beach_tours.png) 50% -200px no-repeat;
+  margin-top:50px;
+  background-size:cover;
+  @include breakpoint(tablet down) {
+    background-size:auto;
+  }
+  .wrap-section {
+    @include grid-row();
+    @include grid-row-size(expand);
+  }
+  .inner {
+    @include grid-column(11);
+    @include grid-column-position(center);
+    position: relative;
+    margin-top:350px;
+    @include breakpoint(tablet down) {
+    margin-top:100px;
+    }
+    .heading {
+      text-align: center;
+      position: relative;
+    }
+    .text-box {
+      position: relative;
+      top:0;
+      text-align: center;
+      margin-top:40px;
+      .left{
+      @include grid-column(5,0);
+      @include unset-mobile-medium;
+      text-align: right;
+      }
+      .right {
+      @include grid-column(7,0);
+      @include unset-mobile-medium;
+      background:#fff;
+      padding:50px 40px;
+      }
+    }
+    .amenities-grid {
+      @include grid-column(11,0);
+      @include grid-column-offset(1);
+      @include breakpoint(tablet down) {
+        @include unset-mobile-medium;
+      }
+      clear:both;
+      position: relative;
+      table {
+        font-family: Montserrat;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 49px;
+        color:#fff;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        text-align: left;
+        vertical-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// Search form
+.search-form {
+
+}
+.search-form label {
+  font-weight: normal;
+}
+.search-form .search-field {
+}
+.search-form .search-submit {
+}
+
+.gform_body ul {
+    list-style: none outside none;
+    margin: 0;
+}
+
+.hidden_label label {
+	display:none;
+}
+
+.gform_button {
+	@extend .blue-button;
+	float:right;
+}

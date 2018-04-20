@@ -1,0 +1,885 @@
+.section-one {
+  @include grid-row();
+  padding-top: 100px;
+  @include breakpoint(medium down) {
+    padding-top: 40px;
+    text-align: center;
+  }
+  .button-cont {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  clear:both;
+  .left {
+    h2 {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      @include breakpoint(medium down) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+    }
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      @include breakpoint(medium down) {
+        background: $body-background;
+        position: relative;
+        width: 90%;
+        top: -35px;
+        left: 0;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    @include grid-column(6);
+    @include unset-mobile-medium;
+  }
+  .right {
+    @include grid-column(6);
+    @include unset-mobile-medium;
+    @include breakpoint(medium down) {
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 30px;
+    }
+    .content {
+      padding-left: 30px;
+      padding-right: 30px;
+      @include breakpoint(medium down) {
+        background: $body-background;
+        position: relative;
+        width: 90%;
+        top: -35px;
+        left: 0;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+    .large-desktop {
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+    .mobile-only {
+      @include breakpoint(tablet up) {
+        display: none;
+      }
+    }
+  }
+}
+
+.callout-one {
+  clear: both;
+  @include breakpoint(medium down) {
+    background-color: #1c2835;
+
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    &.no-margin {
+      margin-bottom: 0;
+    }
+  }
+  @include grid-row();
+  .inner {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    @include breakpoint(medium down) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-image: url(../images/mobile_triangle.png);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+    @include grid-column(10);
+    @include grid-column-position(center);
+    h2 {
+      padding-bottom: 15px;
+      span {
+        font-weight: 700;
+      }
+    }
+    p {
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 12px;
+      padding-top: 10px;
+    }
+    .phone-btn {
+      @include bounceIn();
+    }
+  }
+}
+
+.two-col-images {
+  clear: both;
+  position: relative;
+  .left {
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    background: url(../images/left.jpg) no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -100;
+  }
+  .right {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: url(../images/right.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -100;
+    @include breakpoint(medium down) {
+      &.last {
+        margin-top: 20px;
+      }
+    }
+  }
+  .content {
+    color: #fff;
+    z-index: 1;
+    @include grid-row();
+    .box {
+
+      @include grid-column(6);
+      padding: 130px 0;
+      @include breakpoint(medium down) {
+        padding: 60px 0 40px 0;
+        h2 {
+          font-size: 16px;
+          padding: 0 40px;
+        }
+      }
+      text-align:center;
+      .blue-button {
+        color: #fff;
+        @include breakpoint(medium down) {
+          font-size: 7px;
+          margin-top: 15px;
+        }
+      }
+      @include breakpoint(medium down) {
+        &.last {
+          margin-top: 30px;
+        }
+      }
+      p {
+        display: block;
+        padding: 20px 60px;
+        @include breakpoint(medium down) {
+          display: none;
+        }
+      }
+      &::before,
+      &::after {}
+    }
+  }
+}
+
+.callout-two {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include breakpoint(medium down) {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+  text-align:center;
+  @include grid-row();
+  @include grid-row-size(expand);
+  .inner {
+    @include grid-column(9);
+    @include grid-column-position(center);
+    h2 {
+      padding-bottom: 15px;
+      span {
+        font-weight: 700;
+      }
+    }
+    .blue-button {
+      margin-top: 15px;
+    }
+  }
+}
+
+.services-slider {
+  .slick-slide img {
+    display: inline-block;
+    ;
+  }
+  position:relative;
+  padding-bottom:60px;
+  @include grid-row();
+  @include breakpoint(medium down) {}
+  .item {
+    text-align: center;
+    @include grid-column(4, 10px);
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+    }
+    h4 {
+      font-weight: 700;
+      padding-top: 25px;
+      a {
+        color: $body-font-color;
+      }
+    }
+    .content {
+      padding: 0 20px;
+      @include breakpoint(medium down) {
+        text-align: center;
+        padding: 0 40px;
+      }
+    }
+  }
+}
+
+.slick-next,
+.slick-prev {}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #5ecffe;
+}
+
+.clients-section {
+  .outer {
+    @include grid-row();
+  }
+  @include breakpoint(tablet up) {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  @include breakpoint(medium down) {}
+  .left {
+    @include grid-column(7);
+    @include breakpoint(tablet only) {
+      @include grid-column(7);
+      @include grid-column-position(center);
+    }
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+      text-align: center;
+    }
+    .mobile {
+      @include show-for-only(small);
+    }
+    a.desktop {
+      @include breakpoint(small down) {
+        display: none;
+      }
+    }
+  }
+  .right {
+    @include grid-column(5);
+    @include breakpoint(tablet only) {
+      @include grid-column(7);
+      @include grid-column-position(center);
+    }
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+    }
+    text-align:center;
+    padding-top:40px;
+    h2 {
+      padding-bottom: 30px;
+    }
+    p {
+      padding-bottom: 30px;
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+  }
+}
+
+.standard-page {
+  @include grid-row();
+  @include grid-row-size(expand);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include breakpoint(tablet down) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .inner {
+    @include grid-column(10);
+    @include breakpoint(tablet down) {
+      @include grid-column(11);
+    }
+    @include grid-column-position(center);
+  }
+}
+
+.section-full {
+  @include grid-row();
+  @include grid-row-size(expand);
+  padding-bottom: 350px;
+  background: url(../images/pool-photo.jpg) no-repeat center;
+  background-size: cover;
+  @include breakpoint(tablet down) {
+    background: #151E23;
+    padding-bottom: 0;
+  }
+  width: 100%;
+  color: #fff;
+  background-attachment: fixed;
+  .inner {
+    @include grid-column(11, 0);
+    @include grid-column-position(center);
+    @include breakpoint(tablet down) {
+      @include grid-column(12, 0);
+    }
+    .left {
+      @include grid-column(5, 0);
+      @include grid-column-collapse;
+      @include breakpoint(tablet down) {
+        display: none;
+      }
+    }
+    .right {
+      @include grid-column(7, 0);
+      @include grid-column-collapse;
+      @include breakpoint(tablet down) {
+        @include grid-column(12, 0);
+        text-align: center;
+      }
+
+      .blue-bg {
+        background: url(../images/waves-dot-blue.png) no-repeat 60px 60px;
+        background-color:$main-color;
+        padding: 66px;
+        @include breakpoint(tablet down) {
+          padding: 80px 20px;
+          background: url(../images/waves-dot-blue.png) no-repeat 50% 60px;
+        }
+        h1 {
+          font-family: Oswald;
+          color: #009fe2;
+          text-transform: uppercase;
+        }
+        h3 {
+          padding: 25px 0 25px 0;
+        }
+      }
+      .greg-video {
+        position: relative;
+        @include breakpoint(tablet only) {
+          @include grid-column(9, 0);
+          @include grid-column-position(center);
+          margin-bottom:40px;
+        }
+        .play-button {
+          position: absolute;
+          left: 25px;
+          bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.section-mid {
+  @include grid-row();
+  @include grid-row-size(expand);
+  margin-top: -150px;
+  .inner {
+    @include grid-column(10, 0);
+    @include grid-column-position(center);
+    @include breakpoint(large only) {
+      @include grid-column(11, 0);
+      @include grid-column-position(center);
+    }
+
+    @include breakpoint(tablet only) {
+      @include grid-column(12, 0);
+      @include grid-column-position(center);
+    }
+
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+    }
+    .left {
+      @include grid-column(6, 0);
+      @include grid-column-collapse;
+      background: #151E23;
+      text-align: center;
+      @include breakpoint(medium down) {
+        @include grid-column(12, 0);
+
+      }
+      .inner {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        @include breakpoint(medium down) {
+          padding-top:60px;
+          padding-bottom:60px;
+        }
+      }
+      h1 {
+        text-transform: uppercase;
+        font-family: Oswald;
+        color: #009fe2;
+        padding: 100px 50px 0 50px;
+        @include breakpoint(tablet down) {
+          padding:60px 40px 0 40px;
+        }
+      }
+      h2 {
+        color: #fff;
+        padding: 25px 50px 25px 50px;
+      }
+      p {
+        color: #fff;
+        padding: 15px 50px 0 50px;
+        @include breakpoint(tablet down) {
+          padding-bottom:50px;
+        }
+      }
+    }
+    .right {
+      @include grid-column(6, 0);
+      @include breakpoint(tablet only) {
+        background: #151E23;
+      }
+      @include grid-column-collapse;
+      @include breakpoint(medium down) {
+        @include grid-column(12, 0);
+      }
+    }
+  }
+}
+
+.services-section {
+  margin-top: 150px;
+  @include grid-row();
+  @include grid-row-size(expand);
+  @include breakpoint(medium down) {
+  margin-top: 0;    
+  }
+
+  @include breakpoint(tablet only) {
+  margin-top: 0;    
+  }
+  .inner {
+    @include grid-column(10, 0);
+    @include grid-column-position(center);
+    @include breakpoint(large only) {
+    @include grid-column(11, 0);
+    @include grid-column-position(center);
+    }
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+    }
+    @include breakpoint(tablet only) {
+    @include grid-column(12, 0);
+    @include grid-column-position(center);
+    }
+  }
+  
+  .menu {
+    @include breakpoint(medium down) {
+    flex-flow:column wrap;
+    }
+  }
+
+  .tabs {
+    background: none;
+    border: 0;
+    text-align: center;
+  }
+  .tabs-content {
+    background: none;
+    border: 0;
+    @include grid-column(12, 0);
+    @include grid-column-position(center);
+  }
+
+  .tabs-title>a:focus,
+  .tabs-title>a[aria-selected=true] {
+    background-color: #00A0EE;
+    color: #fff;
+  }
+
+  .tabs-title>a {
+    padding: 3.25rem 1.5rem;
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: 18px;
+    color: #000;
+    span.icon {
+      margin-bottom: 5px;
+    }
+  }
+
+  .tabs-title {
+
+    &.detox {
+      a {}
+    }
+    &.residential {
+      a {}
+    }
+    &.day-treatment {
+      a {}
+    }
+    &.supportive-housing {
+      a {}
+    }
+  }
+}
+
+
+
+.tabs-panel {
+  padding: 0;
+}
+
+.service-item {
+  .left {
+    @include grid-column(4, 0);
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+    }
+    @include breakpoint(tablet only) {
+      @include grid-column(5, 0);
+    }
+
+    .blue-bg {
+      background: #151E23;
+      padding: 50px;
+      color: #fff;
+      h1 {
+        font-family: Oswald;
+        text-transform: uppercase;
+        color: #009fe2;
+      }
+      h2 {
+        color: #fff;
+      }
+    }
+  }
+  .right {
+    @include grid-column(8, 0);
+    @include breakpoint(tablet only) {
+      @include grid-column(7, 0);
+    }
+    @include breakpoint(medium down) {
+      @include grid-column(12, 0);
+      img {
+        display:none;
+      }
+    }
+    .slide-text {
+      padding: 70px 60px;
+      @include breakpoint(tablet down) {
+        padding:30px;
+      }
+      background: url(../images/waves-dot.png) no-repeat 40px 40px;
+      .learn-more {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .05em;
+      }
+    }
+  }
+}
+
+.press-header {
+  h1 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+    @include breakpoint(tablet down) {
+      padding-bottom: 30px;
+      padding-top: 70px;
+    }
+  }
+  background: $main-color;
+  @include grid-row();
+  @include grid-row-size(expand);
+
+  .inner {
+    @include grid-column(10);
+    @include grid-column-position(center);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include breakpoint(tablet down) {
+      @include grid-column(12);
+    }
+  }
+}
+
+.press-archive {
+  @include grid-row();
+  @include grid-row-size(expand);
+  padding-top: 40px;
+  .press-item {
+    margin-bottom: 30px;
+    @include grid-column(4);
+    @include breakpoint(tablet down) {
+      @include grid-column(12);
+    }
+  }
+}
+
+
+.treatment-wrap {
+  padding-top: 60px;
+  @include grid-row();
+  @include grid-row-size(expand);
+  .inner {
+    @include grid-column(10);
+    @include grid-column-position(center);
+    @include breakpoint(tablet down) {
+      @include grid-column(12);
+    }
+  }
+  .page-video {
+    @include grid-column(6,0);
+    padding-right:30px;
+    @include breakpoint(tablet down) {
+      @include grid-column(12,0);
+      padding-bottom:25px;
+      padding-right:0;
+
+    }
+  }
+}
+
+.lazyYT-container {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0 0 56.25% 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.lazyYT-container iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+/*
+ * Video Title (YouTube style)
+ */
+
+.lazyYT-container .html5-info-bar {
+  display:none;
+  position: absolute;
+  top: 0;
+  z-index: 935;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+  transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.lazyYT-container .html5-title {
+  padding-right: 6px;
+  padding-left: 12px;
+}
+
+.lazyYT-container .html5-title-text-wrapper {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-wrap: normal;
+  white-space: nowrap;
+}
+
+.lazyYT-container .html5-title-text {
+  width: 100%;
+  font-size: 13px;
+  line-height: 30px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.lazyYT-container .html5-title-text:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/*
+ * Thumbnail
+ */
+
+.ytp-thumbnail {
+  padding-bottom: inherit;
+  cursor: pointer;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/*
+ * Play button (YouTube style)
+ */
+
+.ytp-large-play-button {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  width: 86px !important;
+  height: 60px !important;
+  padding: 0 !important;
+  margin: -29px 0 0 -42px !important;
+  font-size: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  opacity: .9;
+}
+
+.ytp-large-play-button-svg {
+  opacity: .9;
+  fill: #1f1f1f;
+}
+
+.lazyYT-image-loaded:hover .ytp-large-play-button-svg,
+.ytp-large-play-button:focus .ytp-large-play-button-svg {
+  opacity: 1;
+  fill: #cc181e;
+}
+
+.wrap {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 500;
+  }
+}
+
+.contact-page {
+  .left {
+    @include grid-column(6);
+    @include breakpoint(tablet down) {
+      @include grid-column(12);
+    }
+  }
+
+  .right {
+    @include grid-column(6);
+      @include breakpoint(tablet down) {
+      @include grid-column(12);
+    }
+  }
+
+  .top {
+    @include grid-column(12);
+    padding-bottom:30px;
+  }
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.videos-section {
+  padding-top:100px;
+  padding-bottom:100px;
+  float:left;
+  width:100%;
+  background:url(../images/ocean-bg.png) no-repeat left;
+  background-size:50%;
+  .inner {
+    @include grid-row();
+  }
+  .video-nav {
+    @include grid-column(12);
+    @include grid-column-position(center);
+    .catmenu {
+      @include menu-base;
+      @include menu-simple();
+      li {
+        a {
+          text-transform:uppercase;
+          border-top:2px solid #333;
+          border-bottom:2px solid #333;
+          padding-top:5px;
+          padding-bottom:5px;
+          color:#fff;
+          font-family: Montserrat;
+          letter-spacing:2px;
+          font-size:12px;
+        }
+      }
+    }
+    background:$main-color;
+    margin-bottom:15px;
+    h2 {
+      font-family: Oswald;
+      font-size:47px;
+      margin:0 0 0 0;
+      display:inline-block;
+      padding:0;
+    }
+  }
+
+  .left {
+    @include grid-column(9,0);
+    @include breakpoint(tablet down) {
+      @include grid-column(12);
+       padding-bottom:7%;
+    }
+  }
+
+  .right {
+    @include grid-column(3,0);
+    padding-left:2%;
+    @include breakpoint(tablet down) {
+       @include grid-column(12);
+    }
+    .item {
+    @include grid-column(12,0);
+    padding-bottom:7%;
+    }
+  }
+
+}

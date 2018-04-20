@@ -1,0 +1,278 @@
+#detox-residential {
+  .top-section {
+    @include grid-row();
+    .video-area {
+      @include grid-column(6);
+      @include unset-mobile-medium;
+      @include breakpoint(medium down) {
+        margin-top: 0;
+      }
+      margin-top: -2em;
+      position: relative;
+      z-index: 1;
+      padding: 0 !important;
+      iframe {
+        border: none;
+      }
+    }
+    .future-area {
+      @include grid-column(6);
+      @include unset-mobile-medium;
+      padding: 3em !important;
+      background-color: $dark-blue;
+      h2 {
+        color: $light-blue;
+        text-transform: uppercase;
+        font-family: Oswald;
+      }
+      p {
+        text-align: justify;
+        color: $white;
+      }
+    }
+  }
+  .personal-section {
+    padding-bottom:5em;
+    .individual {
+      padding-top:7em;
+      @include grid-row();
+      .photo-area{
+        @include grid-column(3);
+        @include unset-mobile-medium;
+        @include breakpoint(medium down) {
+          text-align: center;
+        }
+      }
+      .detail-area{
+        @include grid-column(9);
+        @include unset-mobile-medium;
+        h2{
+          color:$light-blue;
+          padding-bottom:.5em;
+
+          @include breakpoint(medium down) {
+            text-align: center;
+            padding-top:1em;
+
+          }
+        }
+        p{
+          text-align: justify;
+        }
+
+      }
+    }
+  }
+  .facility-back{
+    height:600px;
+    background: url(../images/facility-back.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    @include breakpoint(medium down) {
+      height:300px;
+    }
+  }
+  .facility-section {
+    background: url(../images/facility.png) no-repeat bottom;
+    background-size: cover;
+    @include grid-row();
+    .left-area {
+      @include grid-column(6);
+      @include unset-mobile-medium;
+      @include breakpoint(medium down) {
+        margin-top: 0;
+      }
+      margin-top: -13em;
+      position: relative;
+      z-index: 1;
+      padding: 0 !important;
+      text-align: center;
+
+      .detox-form{
+        padding:3em;
+        background-color: $dark-blue;
+        color:$white;
+        h2{
+          text-transform: uppercase;
+          color:$light-blue;
+          font-family: Oswald;
+        }
+      }
+    }
+
+    .right-area{
+      @include grid-column(6);
+      @include unset-mobile-medium;
+      @include breakpoint(medium down) {
+        margin-top: 0;
+      }
+      margin-top: -8em;
+      position: relative;
+      z-index: 1;
+      background-color: #eff2f9;
+      padding:3em !important;
+      h4{
+        color:$light-blue;
+        padding-bottom:.5em;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+  .luxury-section {
+    padding-top:10em;
+    padding-bottom:8em;
+    @include breakpoint(medium down) {
+      padding-top:1em;
+    }
+   // display: flex;
+    @include grid-row();
+    .left-area {
+      @include grid-column(3);
+      @include unset-mobile-medium;
+      margin-top:5%;
+     // display: flex;
+    //  justify-content: center;
+    //  align-items: center;
+      img:nth-child(1) {
+        width: 70%;
+        z-index:0;
+        margin-left:5em;
+        @include breakpoint(medium down) {
+          width:31%;
+          margin-left:0;
+        }
+      }
+      img:nth-child(2) {
+        width: 100%;
+        margin-top:-1em;
+        z-index:1;
+        position:relative;
+         @include breakpoint(medium down) {
+          width:33%;
+          margin-left:0;
+          margin-top:0;
+        }
+      }
+      img:nth-child(3) {
+        width: 80%;
+        margin-left:4em;
+        margin-top:-1em;
+        z-index:0;
+         @include breakpoint(medium down) {
+          width:31%;
+          margin-left:0;
+          margin-top:0;
+        }
+      }
+    }
+    .right-area{
+      @include grid-column(9);
+      @include unset-mobile-medium;
+      .item{
+        h2{
+          color:$light-blue;
+        }
+      }
+    }
+  }
+  .residential-back{
+    height:600px;
+    background: url(../images/residential.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+      @include breakpoint(medium down) {
+      height:300px;
+    }
+  }
+  .residential-section {
+    padding-bottom:5em;
+    @include grid-row();
+    .left-area{
+      margin-top:-150px;
+      padding:0 !important;
+      padding-bottom:1em;
+      @include grid-column(6);
+      @include unset-mobile-medium;
+      @include breakpoint(medium down) {
+        margin-top: 0;
+      }
+      .residential-title{
+        background-color: $dark-blue;
+        padding:2em;
+        height:150px;
+        h2{
+          font-family: Oswald;
+          color:$light-blue;
+        }
+        h3{
+          color:#aaa;
+        }
+      }
+      .residential-content{
+         padding-left:1.5em;
+         padding-right:1.5em;
+      }
+    }
+    .right-area{
+      margin-top:-100px;
+      padding:3em 2em !important;
+      background-color: $white;
+      @include grid-column(6);
+      @include unset-mobile-medium;
+      @include breakpoint(medium down) {
+        margin-top: 30px;
+      }
+      .item{
+        p{
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .location-section {
+    height:700px;
+    background: url(../images/coastline-photo.jpg) no-repeat right;
+    background-size: cover;
+    .location-content{
+      @include grid-row();
+      display: flex;
+      height:100%;
+      .left-area{
+        @include grid-column(6);
+        @include unset-mobile-medium;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+          font-family: Oswald;
+          color:$light-blue;
+        }
+        h2{
+          color:#eee;
+        }
+        small{
+          color: $white;
+        }
+      }
+    }
+  }
+  .gap{
+    margin-top:2em;
+  }
+  ul{
+    list-style: none;
+    margin-left:0;
+    li {
+      padding-left: 1em;
+      text-indent: -.7em;
+    }
+
+    li::before {
+      content: "• ";
+      color: $light-blue; /* or whatever color you prefer */
+      font-size:20px;
+    }
+  }
+}

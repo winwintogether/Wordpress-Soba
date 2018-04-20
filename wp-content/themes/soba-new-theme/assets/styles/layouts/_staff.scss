@@ -1,0 +1,73 @@
+.staff-archive-index {
+  @include grid-row();
+  @include grid-row-size(expand);
+  .inner {
+    @include grid-column(11);
+    @include grid-column-position(center);
+    @include unset-mobile-medium;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.tax-staff_category {
+  .main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    clear: both;
+  }
+}
+
+.cat-name {
+  @include grid-row();
+  @include grid-row-size(expand);
+  h2 {
+    @include grid-column(10);
+    @include grid-column-position(center);
+    @include unset-mobile-medium;
+  }
+  padding-bottom: 30px;
+}
+
+.staff-listing {
+  @include grid-row();
+  @include grid-row-size(expand);
+  padding-bottom: 40px;
+  .item {
+
+    @include grid-column(10);
+    @include grid-column-position(center);
+    @include unset-mobile-medium;
+
+    .thumb {
+      text-align: center;
+      @include grid-column(2);
+      @include unset-mobile-medium;
+      @include breakpoint(tablet down) {
+        text-align: center;
+      }
+
+    }
+    .staff-text {
+      @include grid-column(10);
+      @include unset-mobile-medium;
+      @include breakpoint(tablet down) {
+        padding-top: 30px;
+      }
+    }
+  }
+}
+
+h3.staff-title {
+  font-weight: 600 !important;
+}
+
+video.staff-video {
+  display: none;
+  width:100%;
+  //top: 30vh;
+  //left: 25vw;
+  //z-index: 10000;
+  //position: fixed;
+  @include box-shadow(10px,10px,5px,rgba(0,0,0,0.75))
+}

@@ -1,0 +1,166 @@
+@mixin unset-mobile-medium {
+   @include breakpoint(medium down) {
+        @include grid-column(12);
+        @include grid-column-unposition;
+    }
+}
+
+@mixin unset-mobile-medium-zero {
+   @include breakpoint(medium) {
+        @include grid-column(12,0);
+        @include grid-column-unposition;
+    }
+    @include breakpoint(small) {
+        @include grid-column(12,0);
+        @include grid-column-unposition;
+    }
+}
+
+@mixin unset-mobile-only {
+    @include breakpoint(small) {
+        @include grid-column(12);
+        @include grid-column-unposition;
+    }
+}
+
+@mixin browser($browsers: Mozilla) {
+  @each $browser in $browsers {
+    html[data-browser*="#{$browser}"] & {
+      @content;
+    }
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin animation-delay($delay)
+{
+  animation-delay:$delay;
+  -o-animation-delay:$delay;
+  -ms-animation-delay:$delay;
+  -webkit-animation-delay:$delay;
+  -moz-animation-delay:$delay;
+}
+
+@mixin border-radius($value){
+  border-radius:$value;
+  -o-border-radius:$value;
+  -ms-border-radius:$value;
+  -webkit-border-radius:$value;
+  -moz-border-radius:$value;
+}
+
+@mixin  animation-iteration-count($value){
+  animation-iteration-count:$value;
+  -o-animation-iteration-count:$value;
+  -ms-animation-iteration-count:$value;
+  -webkit-animation-iteration-count:$value;
+  -moz-animation-iteration-count:$value;
+}
+
+@mixin animation-direction($value){
+  animation-direction:$value;
+  -o-animation-direction:$value;
+  -ms-animation-direction:$value;
+  -webkit-animation-direction:$value;
+  -moz-animation-direction:$value;
+}
+
+@mixin animation-duration($value){
+  animation-duration:$value;
+  -o-animation-duration:$value;
+  -ms-animation-duration:$value;
+  -webkit-animation-duration:$value;
+  -moz-animation-duration:$value;
+}
+
+@mixin animation-name($value){
+  animation-name:$value;
+  -o-animation-name:$value;
+  -ms-animation-name:$value;
+  -webkit-animation-name:$value;
+  -moz-animation-name:$value;
+}
+
+span.blue {
+  color:#09bdff;
+}
+
+.blue-button {
+  @include button(false,#00b4ff,auto,auto,hollow);
+  font-family: 'Montserrat';
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:.1em;
+  font-weight:700;
+}
+.phone-btn {
+  @include button(false,#00b4ff,auto,auto,hollow);
+  font-family: 'Open Sans';
+  text-transform:uppercase;
+  font-size:18px;
+  letter-spacing:.2em;
+  font-weight:normal;
+  border-radius:0;
+  padding:13px 20px;
+}
+
+blockquote {
+    text-align:center;
+    font-style: italic;
+    background:#fff;
+    font-size:36px;
+    position:relative;
+       span {
+        font-family:'Montserrat';
+        letter-spacing:.2em;
+        font-size:11px;
+        text-transform:uppercase;
+        font-style:normal;
+        display:block;
+        font-weight:700;
+        padding-top:20px;
+    }
+}
+blockquote:before {
+    position: absolute;
+    top:0;
+    width: 40px;
+    height: 40px;
+    font-size: 80px;
+    line-height: 1;
+    text-align:center;
+    width:100%;
+}
+blockquote:before {
+    top: 50px;
+    left: 0;
+    content: '"';
+    color:#00b4ff;
+}
+
+.reveal {
+@include breakpoint(tablet down) {
+
+}
+.close-button {
+    font-size:3rem;
+}
+}
+.iziModal {
+    background:none;
+}
+.callout-one{
+  margin-top:0 !important;
+}
+

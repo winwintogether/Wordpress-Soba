@@ -1,0 +1,1 @@
+<div class="updated" datetime="<?= get_post_time('c', true); ?>">BLOG<span> // </span><?= get_the_date(); ?></div>
